@@ -23,6 +23,7 @@ There are 40 test cases, each usually larger than the last, and they must all be
 After almost an hour of research I come across this theorem:
 
 ![enter image description here](https://i.imgur.com/e2cpjdI.png)
+
 Source: https://people.cs.clemson.edu/~goddard/handouts/math8540/adjacencyNotes.pdf. The proof is pretty interesting too.
 
 
@@ -30,7 +31,7 @@ So when we compute for *M*<sup>L</sup>, the answer is in in *M*<sup>L</sup><sub>
 
 This is the most efficient solution I could find (and reasonably understand). Multiplication of two matrices costs *O(V<sup>3</sup>)*, and  [divide-and-conquer exponentiation](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) costs *O(log<sub>2</sub>L)*. Thus the overall runtime of this solution is *O(V<sup>3</sup>\*log<sub>2</sub>L)*.
 
-This is the superior to alternatives like DP-, DFS-, and BFS-based solutions which max at *O(V<sup>2</sup>\*L)* runtime, This is important because *L* grows much faster as the graph gets larger. Even after exhausting code and compiler optimizations I could not get my DP solution to beat the time.
+This is superior to alternatives like DP-, DFS-, and BFS-based solutions which max at *O(V<sup>2</sup>\*L)* runtime, This is important because *L* grows much faster as the graph gets larger. Even after exhausting code and compiler optimizations I could not get my DP solution to beat the time.
 
 ## Implementation
 

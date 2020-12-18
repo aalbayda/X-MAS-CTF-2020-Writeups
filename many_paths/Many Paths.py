@@ -49,17 +49,13 @@ for i in xrange(41):
 	while True:
 		data = s.recv(4096)
 		buf += data
-		if i > 37:
-			print data
-		if (len(buf) > 0 and buf.split("\n")[-2] == '') or (len(buf) > 0 and len(data) == 0):
+		if (len(buf) > 0 and buf.split("\n")[-2] == ''):
 			break
-	print "Solving " + str(i) + "/40"
+	print buf
 	if i == 0:
 		data = buf.split("\n")[1:-2]
 	else:
 		data = buf.split("\n")[2:-2]
-	if i > 37:
-		print data
 	payload = parse(data)
 	s.send(payload.encode("utf-8"))
 
