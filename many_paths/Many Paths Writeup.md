@@ -113,8 +113,7 @@ for i in xrange(41):
 	s.send(payload)
 ```
 
-
-I ran this with [PyPy2.7](https://www.pypy.org/).
+I ran this with [PyPy2.7](https://www.pypy.org/), which runs magnitudes faster than the standard Python interpreter.
 
 
 ## Flag
